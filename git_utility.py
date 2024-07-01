@@ -9,7 +9,7 @@ def cli():
     pass
 
 @click.command()
-@click.option("-d", "--directory", default=".", type=str, help="Target path get git status of")
+@click.option("-d", "--directory", default=".", type=str, help="Target path get git branch of")
 def get_branches(directory):
     os.chdir(directory)
     result = subprocess.run(["git", "branch"], capture_output=True, text=True)
